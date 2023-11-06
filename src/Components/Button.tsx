@@ -5,10 +5,18 @@ interface PropsType {
   cta?: boolean,
   status?:string
 }
-
+/**
+          <Button cta>Start Quizz</Button>
+          <Button cta>Check answers</Button>
+          <Button cta>Play again</Button>
+          <Button status='unselected'>Start Quizz</Button>
+          <Button status='correct'>Adios</Button>
+          <Button status='uncorrect'>Start Quizz</Button>
+          <Button status='selected'>Hola</Button>
+ */
 const StyledButton = styled.button<PropsType>`
-    border-radius: ${({cta}) => cta ? "18px": "20px"};
-    padding: ${({cta}) => cta ? "1em 3em": ".3em 1em"};
+    border-radius: ${({cta}) => cta ? "18px": "15px"};
+    padding: ${({cta}) => cta ? "1em 2em": ".3em 1em"};
     font-size:${({cta}) => cta ? "1.4em": "1.2em"};
     font-weight: 500;
     color: ${({cta}) => cta ? "#fff" : "#293264" };
