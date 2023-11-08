@@ -14,13 +14,14 @@ interface PropsType {
           <Button status='uncorrect'>Start Quizz</Button>
           <Button status='selected'>Hola</Button>
  */
+
 const StyledButton = styled.button<PropsType>`
-    border-radius: ${({cta}) => cta ? "18px": "15px"};
-    padding: ${({cta}) => cta ? "1em 2em": ".3em 1em"};
-    font-size:${({cta}) => cta ? "1.4em": "1.2em"};
+    border-radius: ${({cta}) => cta ? "18px": "14px"};
+    padding: ${({cta}) => cta ? ".6em 2.5em": ".2em 1em"};
+    font-size:${({cta}) => cta ? "1.4rem": "1.1rem"};
     font-weight: 500;
     color: ${({cta}) => cta ? "#fff" : "#293264" };
-    border-width: ${({status}) => status === 'unselected' ? "2.5px" : "0" };
+    border-width: ${({status}) => status === 'unselected' ? "1px" : "0" };
     border-color: ${({cta}) => cta ? "#fff" : "#4D5B9E" };
     cursor: pointer;
     background: ${({status}) => {

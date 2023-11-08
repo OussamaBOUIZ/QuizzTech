@@ -6,7 +6,7 @@ const CenteredDiv = styled.div`
     justify-content: center;
     align-items: center;
 `
-export default function Centered({children, className}: {children: React.ReactNode, className: string}) {
+export default function Centered({children, className}: {children: React.ReactNode, className?: string}) {
   return (
     <CenteredDiv className={className}>
         {children}
