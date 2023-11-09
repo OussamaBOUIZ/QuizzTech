@@ -1,5 +1,5 @@
-import Button from "../Components/Button";
-import Centered from "../Components/Centered";
+import Button from "../StyledComponents/Button";
+import Centered from "../StyledComponents/Centered";
 
 export default function Home() {
   return (

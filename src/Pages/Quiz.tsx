@@ -1,7 +1,7 @@
 import React from 'react'
 import Question from '../Components/Question'
-import Button from '../Components/Button'
-import Centered from '../Components/Centered'
+import Button from '../StyledComponents/Button'
+import Centered from '../StyledComponents/Centered'
 
 export default function Quiz() {
   return (
