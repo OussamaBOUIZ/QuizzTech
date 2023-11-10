@@ -3,7 +3,8 @@ import styled from 'styled-components'
 interface PropsType {
   children: React.ReactNode,
   cta?: boolean,
-  status?:string
+  status?:string,
+  onClick?: React.EventHandler<React.MouseEvent<HTMLButtonElement>>
 }
 /**
           <Button cta>Start Quizz</Button>
@@ -34,9 +35,9 @@ const StyledButton = styled.button<PropsType>`
     opacity: ${({status}) => status === 'uncorrect' ? '.7': '1'};
 `
 
-export default function Button({children, cta, status}: PropsType) {
+export default function Button({children, cta, status, onClick}: PropsType) {
   return (
-    <StyledButton cta={cta} status={status}>
+    <StyledButton cta={cta} status={status} onClick={onClick}>
         {children}
     </StyledButton>
   )
