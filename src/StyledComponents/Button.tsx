@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-interface PropsType {
+type PropsType = {
   children: React.ReactNode,
-  cta?: boolean,
+  cta?: boolean ,
   status?:string,
   onClick?: React.EventHandler<React.MouseEvent<HTMLButtonElement>>
-}
+};
 /**
           <Button cta>Start Quizz</Button>
           <Button cta>Check answers</Button>

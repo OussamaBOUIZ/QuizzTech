@@ -1,0 +1,90 @@
+[
+    {
+      "content": "What is the capital of France?",
+      "choices": [
+        {
+          "id": 1,
+          "value": "Paris"
+        },
+        {
+          "id": 2,
+          "value": "London"
+        },
+        {
+          "id": 3,
+          "value": "Berlin"
+        },
+        {
+          "id": 4,
+          "value": "Madrid"
+        }
+      ],
+      "multiChoices": false
+    },
+    {
+      "content": "Which of the following programming languages is statically typed?",
+      "choices": [
+        {
+          "id": 1,
+          "value": "JavaScript"
+        },
+        {
+          "id": 2,
+          "value": "Python"
+        },
+        {
+          "id": 3,
+          "value": "Java"
+        },
+        {
+          "id": 4,
+          "value": "Ruby"
+        }
+      ],
+      "multiChoices": false
+    },
+    {
+      "content": "What is the capital of France?",
+      "choices": [
+        {
+          "id": 1,
+          "value": "Paris"
+        },
+        {
+          "id": 2,
+          "value": "London"
+        },
+        {
+          "id": 3,
+          "value": "Berlin"
+        },
+        {
+          "id": 4,
+          "value": "Madrid"
+        }
+      ],
+      "multiChoices": false
+    },
+    {
+      "content": "Which of the following programming languages is statically typed?",
+      "choices": [
+        {
+          "id": 1,
+          "value": "JavaScript"
+        },
+        {
+          "id": 2,
+          "value": "Python"
+        },
+        {
+          "id": 3,
+          "value": "Java"
+        },
+        {
+          "id": 4,
+          "value": "Ruby"
+        }
+      ],
+      "multiChoices": false
+    }
+  ]
