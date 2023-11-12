@@ -1,10 +1,13 @@
-import { useState } from "react";
-import questionApi from '../API/questionApi.json'
-import { QuestionType } from "../interfaces";
+// import { useState } from "react";
+// import questionApi from '../API/questionApi.json'
+// import { QuestionType } from "../interfaces";
 
-export const useQuestions = () => {
-    const [questions, setQuestions] = useState<QuestionType[]>();
+// export const useQuestions = (arr: qus) => {
 
-    setQuestions(questionApi)
-    return [questions, setQuestions];
-}
+//     setQuestions(questionApi)
+//     return [questions, setQuestions];
+// }
+
+/*
+    This file is meant to be containing a custom hook 
+*/

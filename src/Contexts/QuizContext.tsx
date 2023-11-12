@@ -1,20 +1,28 @@
-import { SetStateAction, createContext, useState } from "react"
-import { useQuestions } from "../hooks/useQuestions";
+import { SetStateAction, createContext, useEffect, useState } from "react"
 import { QuestionType } from "../interfaces";
+import questionApi from '../API/questionApi.json'
 
 interface ContextType {
-    setQuestions: React.Dispatch<SetStateAction<QuestionType[] | undefined>>
+    questions: QuestionType[],
+    setQuestions: React.Dispatch<SetStateAction<QuestionType[]>>
 }
 
 const QuizContext = createContext<ContextType>({} as ContextType)
 
 export default function QuizProvider({children}: {children: React.ReactNode}) {
-  
-  const [questions, setQuestions] = useQuestions();
+  console.log("render");
+  const [questions, setQuestions] = useState<QuestionType[]>([]);
 
+  useEffect(() => setQuestions(questionApi));
+  // setQuestions(questionApi)
+  console.log("questions", questions)
   return (
-    <QuizContext.Provider value={{questions, setQuestions}}>
+    <QuizContext.Provider value={{
+      questions, setQuestions
+      }}>
         {children}
     </QuizContext.Provider>
   )
 }
+
+export {QuizContext};

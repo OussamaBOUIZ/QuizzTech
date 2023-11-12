@@ -4,19 +4,23 @@
       "choices": [
         {
           "id": 1,
-          "value": "Paris"
+          "value": "Paris",
+          "status": "unselected"
         },
         {
           "id": 2,
-          "value": "London"
+          "value": "London",
+          "status": "unselected"
         },
         {
           "id": 3,
-          "value": "Berlin"
+          "value": "Berlin",
+          "status": "unselected"
         },
         {
           "id": 4,
-          "value": "Madrid"
+          "value": "Madrid",
+          "status": "unselected"
         }
       ],
       "multiChoices": false
@@ -26,19 +30,23 @@
       "choices": [
         {
           "id": 1,
-          "value": "JavaScript"
+          "value": "JavaScript",
+          "status": "unselected"
         },
         {
           "id": 2,
-          "value": "Python"
+          "value": "Python",
+          "status": "unselected"
         },
         {
           "id": 3,
-          "value": "Java"
+          "value": "Java",
+          "status": "unselected"
         },
         {
           "id": 4,
-          "value": "Ruby"
+          "value": "Ruby",
+          "status": "unselected"
         }
       ],
       "multiChoices": false
@@ -48,19 +56,23 @@
       "choices": [
         {
           "id": 1,
-          "value": "Paris"
+          "value": "Paris",
+          "status": "unselected"
         },
         {
           "id": 2,
-          "value": "London"
+          "value": "London",
+          "status": "unselected"
         },
         {
           "id": 3,
-          "value": "Berlin"
+          "value": "Berlin",
+          "status": "unselected"
         },
         {
           "id": 4,
-          "value": "Madrid"
+          "value": "Madrid",
+          "status": "unselected"
         }
       ],
       "multiChoices": false
@@ -70,19 +82,23 @@
       "choices": [
         {
           "id": 1,
-          "value": "JavaScript"
+          "value": "JavaScript",
+          "status": "unselected"
         },
         {
           "id": 2,
-          "value": "Python"
+          "value": "Python",
+          "status": "unselected"
         },
         {
           "id": 3,
-          "value": "Java"
+          "value": "Java",
+          "status": "unselected"
         },
         {
           "id": 4,
-          "value": "Ruby"
+          "value": "Ruby",
+          "status": "unselected"
         }
       ],
       "multiChoices": false
