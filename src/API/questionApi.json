@@ -1,5 +1,6 @@
 [
     {
+      "questionId": 1,
       "content": "What is the capital of France?",
       "choices": [
         {
@@ -23,9 +24,10 @@
           "status": "unselected"
         }
       ],
-      "multiChoices": false
+      "multiChoices": true
     },
     {
+      "questionId": 2,
       "content": "Which of the following programming languages is statically typed?",
       "choices": [
         {
@@ -52,6 +54,7 @@
       "multiChoices": false
     },
     {
+      "questionId": 3,
       "content": "What is the capital of France?",
       "choices": [
         {
@@ -78,6 +81,7 @@
       "multiChoices": false
     },
     {
+      "questionId": 4,
       "content": "Which of the following programming languages is statically typed?",
       "choices": [
         {

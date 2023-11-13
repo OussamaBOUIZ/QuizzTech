@@ -14,8 +14,7 @@ export default function QuizProvider({children}: {children: React.ReactNode}) {
   const [questions, setQuestions] = useState<QuestionType[]>([]);
 
   useEffect(() => setQuestions(questionApi));
-  // setQuestions(questionApi)
-  console.log("questions", questions)
+  
   return (
     <QuizContext.Provider value={{
       questions, setQuestions

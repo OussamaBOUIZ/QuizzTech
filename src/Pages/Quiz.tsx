@@ -7,7 +7,7 @@ export default function Quiz() {
 
     return (
         <QuizProvider>
-            <div className='px-5 py-14 '>
+            <div className='px-4 py-14'>
                 <QuestionsContainer />
                 <Centered className='mt-10'>
                     <Button cta>Check answers</Button>
