@@ -18,7 +18,7 @@ export default function Question({questionItem}: {questionItem: QuestionType}) {
         for (let i = 0; i < prevChoices.length; i++) {
           console.log("id", id)
           if (id === prevChoices[i].id) {
-            updatedChoices[i] = {...prevChoices[i], status: "selected"};
+            updatedChoices[i] = {...prevChoices[i], status: prevChoices[i].status === "unselected" ? "selected": "unselected"};
           } else {
             updatedChoices[i] = prevChoices[i];
           }
@@ -31,7 +31,7 @@ export default function Question({questionItem}: {questionItem: QuestionType}) {
         for (let i = 0; i < prevChoices.length; i++) {
 
           if (id === prevChoices[i].id) {
-            updatedChoices[i] = {...prevChoices[i], status: "selected"};
+            updatedChoices[i] = {...prevChoices[i], status: prevChoices[i].status === "unselected" ? "selected": "unselected"};
           } else {
             updatedChoices[i] = {...prevChoices[i], status: "unselected"};
           }
