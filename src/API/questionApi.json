@@ -2,6 +2,7 @@
     {
       "questionId": 1,
       "content": "What is the capital of France?",
+      "rightIds": [1],
       "choices": [
         {
           "id": 1,
@@ -24,11 +25,12 @@
           "status": "unselected"
         }
       ],
-      "multiChoices": true
+      "multiChoices": false
     },
     {
       "questionId": 2,
       "content": "Which of the following programming languages is statically typed?",
+      "rightIds": [2],
       "choices": [
         {
           "id": 1,
@@ -51,11 +53,12 @@
           "status": "unselected"
         }
       ],
-      "multiChoices": false
+      "multiChoices": true
     },
     {
       "questionId": 3,
       "content": "What is the capital of France?",
+      "rightIds": [1],
       "choices": [
         {
           "id": 1,
@@ -83,6 +86,7 @@
     {
       "questionId": 4,
       "content": "Which of the following programming languages is statically typed?",
+      "rightIds": [2, 3],
       "choices": [
         {
           "id": 1,
@@ -105,6 +109,6 @@
           "status": "unselected"
         }
       ],
-      "multiChoices": false
+      "multiChoices": true
     }
   ]

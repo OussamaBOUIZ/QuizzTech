@@ -3,3 +3,6 @@ export interface QuestionType {
 	choices: {id: number, value: string, status: string}[],
 	multiChoices: boolean,
 };
+
+export interface Choice 
+  {id: number, value: string, status: string}

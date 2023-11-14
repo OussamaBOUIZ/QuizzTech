@@ -1,47 +1,22 @@
-import { useEffect, useState } from 'react';
-import { QuestionType } from '../interfaces';
+import {  useEffect, useState } from 'react';
+import { Choice, QuestionType } from '../interfaces';
 import ChoiceButton from './ChoiceButton';
+import { handleChoiceClick, updatingRestChoiceStatus, updatingSelectedChoiceStatus } from '../Helpers/HandleEventUtils';
+import useEffectOnUpdate from '../hooks/useEffectOnUpdate';
+import { getSelectedChoicesIds } from '../Helpers/getSelectedChoicesIds';
 
-interface Choice 
-  {id: number, value: string, status: string}
 
 
 export default function Question({questionItem}: {questionItem: QuestionType}) {
 
   const [choices, setChoices] = useState<Choice[]>(questionItem.choices);
+  const [selectedChoicesIds, setSelectedChoicesIds] = useState<number[]>([]);
 
-  function handleChoiceClick (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) {
-    console.log("id", id)
-    if (questionItem.multiChoices) {
-      setChoices(prevChoices => {
-        const updatedChoices: Choice[] = [];
-        for (let i = 0; i < prevChoices.length; i++) {
-          console.log("id", id)
-          if (id === prevChoices[i].id) {
-            updatedChoices[i] = {...prevChoices[i], status: prevChoices[i].status === "unselected" ? "selected": "unselected"};
-          } else {
-            updatedChoices[i] = prevChoices[i];
-          }
-        }
-        return updatedChoices;
-      })
-    } else {
-      setChoices(prevChoices => {
-        const updatedChoices: Choice[] = [];
-        for (let i = 0; i < prevChoices.length; i++) {
+  console.log("selectedChoicesIds", selectedChoicesIds);
 
-          if (id === prevChoices[i].id) {
-            updatedChoices[i] = {...prevChoices[i], status: prevChoices[i].status === "unselected" ? "selected": "unselected"};
-          } else {
-            updatedChoices[i] = {...prevChoices[i], status: "unselected"};
-          }
-        }
-        return updatedChoices;
-      })
-    }
-  }
-
-  useEffect(()=> console.log("choices: ", choices), [choices]);
+  useEffectOnUpdate(() => {
+    setSelectedChoicesIds(getSelectedChoicesIds(choices))
+  }, [choices]);
 
   return (
     <figure className='border-b-2 border-lightGrey pb-6 mb-8'>
@@ -49,8 +24,11 @@ export default function Question({questionItem}: {questionItem: QuestionType}) {
         <div className="flex ga-4 justify-between">
             {choices.map((choice)=> <ChoiceButton 
                         id={choice.id} 
+                        key={choice.id}
                         status={choice.status}
                         onClick={handleChoiceClick}
+                        setter={setChoices}
+                        notOnlyMe={questionItem.multiChoices}
                         >{choice.value}
                         </ChoiceButton>
                         )}

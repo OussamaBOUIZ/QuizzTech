@@ -3,6 +3,7 @@ import Centered from '../StyledComponents/Centered'
 import QuizProvider from '../Contexts/QuizContext';
 import QuestionsContainer from '../Components/QuestionsContainer';
 
+
 export default function Quiz() {
 
     return (
